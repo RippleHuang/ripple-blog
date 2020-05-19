@@ -1,5 +1,5 @@
 const nav = require('./nav')
-const privacy = require('./privacy')
+const privacy = require('./privacys')
 
 module.exports = {
     logo: '/assets/img/logo.jpg',
@@ -30,8 +30,8 @@ module.exports = {
     mode: 'auto',
     nav: nav,
     valineConfig: {
-      appId: privacy.appId,
-      appKey: privacy.appKey
+      appId: privacys.appId,
+      appKey: privacys.appKey
     },
     lastUpdated: '更新时间',
     sidebar: 'auto',
