@@ -1,0 +1,73 @@
+#app
+  background-color: rgba(0, 0, 0, .05) !important
+// 主页
+.home-blog
+  .hero
+    z-index 1
+  .info-wrapper
+    background var(--default-color-6) !important
+    .personal-info-wrapper
+      padding-top 25px
+      .num > div:first-child
+        border-right 1px solid transparent
+// 侧栏导航背景
+.sidebar
+  background-color var(--default-color-4) !important
+  a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+// 页面背景
+.page
+  background transparent
+  .page-title, 
+  .content__default:not(.custom)
+    max-width 830px !important
+    background-color var(--background-color)
+    box-shadow $boxShadow
+    &:hover
+      box-shadow 0 1px 6px 0 rgba(0, 0, 0, .4)
+  .theme-reco-content
+    transform: none !important
+  .page-title
+    position relative
+    margin-bottom 20px
+    background-color transparent
+    box-shadow none
+    z-index 10
+    &:hover
+      box-shadow none
+    > h1
+      margin 5px 0
+    > hr
+      display none
+    > div
+      padding 0 10px
+      background-color var(--default-color-8)
+      display inline-block
+      @media (min-width: 480px)
+        position absolute
+        top 34px
+        right 0
+
+// 分页背景
+.pagation.pagation
+  background transparent !important
+  .pagation-list
+    .jump:not(.bgprimary)
+      background-color var(--background-color);
+
+// 时间轴
+.timeline-wrapper
+  .year
+    font-size 32px
+    background transparent
+  .year-wrapper
+    margin-top 10px
+    background var(--background-color)
+    li
+      padding 10px !important
+      .date::before
+        top 21px !important
