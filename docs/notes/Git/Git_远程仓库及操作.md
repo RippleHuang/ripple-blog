@@ -17,7 +17,7 @@ git 远程仓库及操作
 
 ### 图解
 
-![alt Git](../../.vuepress/public/assets/img/flow.png)
+![alt Git](../../.vuepress/public/assets/img/git.png)
 
 ### 创建本地仓库
 
@@ -138,5 +138,6 @@ git 远程仓库及操作
 
 ## SSH 密钥
 
-- 生成密钥：c`md 命令： ssh-keygen -t rsa -C 邮箱地址`
+- 生成密钥：`cmd 命令： ssh-keygen -t rsa -C 邮箱地址`
 - 生成私钥和公钥，把公钥贴到 github 中
+- 如果是码云的话，还需要执行命令行 `ssh -T git@gitee.com`
