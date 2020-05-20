@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+docs/.vuepress/dist
 /dist
 
 # local env files
@@ -21,4 +22,4 @@ yarn-error.log*
 *.sw?
 
 # 隐藏
-# privacys.js
+privacys.js
