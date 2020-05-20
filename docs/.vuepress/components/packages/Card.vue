@@ -86,7 +86,7 @@ export default {
   }
   &-body {
     position: relative;
-    z-index: 20;
+    z-index: 5;
     box-sizing: border-box;
     padding: 20px 20px 0;
     &-masking {
