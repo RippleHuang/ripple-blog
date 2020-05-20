@@ -1,6 +1,6 @@
 ---
 title: git 发布到npm
-date: 2020-4-9
+date: 2020-04-13
 categories:
   - git
 tags:

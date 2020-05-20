@@ -1,8 +1,8 @@
 ---
 title: webpack js处理
-date: 2020-2-26
+date: 2020-02-26
 categories:
-  - webpack
+  - webpack打包
 tags:
   - webpack
 ---

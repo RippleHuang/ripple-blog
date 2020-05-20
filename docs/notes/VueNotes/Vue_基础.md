@@ -1,11 +1,10 @@
 ---
 title: vue 基本用法
-date: 2020-3-27
+date: 2020-03-27
 categories:
  - vue框架
 tags:
  - vue
- - 基础
 ---
 
 ::: tip

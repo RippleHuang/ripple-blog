@@ -1,13 +1,10 @@
 ---
 title: vue ui组件库
-date: 2020-4-5
+date: 2020-04-05
 categories:
   - vue框架
 tags:
   - vue
-  - Vant
-  - Mint
-  - element-ui
 ---
 
 ::: tip

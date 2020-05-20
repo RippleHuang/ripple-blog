@@ -9,6 +9,8 @@ npm run docs:build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
+# 自定义域名
+echo 'blog.ripplehuang.cn' > CNAME
 
 git init
 git add -A

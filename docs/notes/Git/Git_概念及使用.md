@@ -1,6 +1,6 @@
 ---
 title: git 概念及基础
-date: 2020-3-3
+date: 2020-03-03
 categories:
   - git
 tags:

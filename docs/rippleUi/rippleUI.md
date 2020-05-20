@@ -1,7 +1,6 @@
 ---
 title: vue 组件库 hripple-ui
-date: 2020-4-12
-sticky: 1
+date: 2020-04-12
 categories:
   - vue框架
 tags:

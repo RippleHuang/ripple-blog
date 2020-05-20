@@ -1,12 +1,11 @@
 ---
 title: vue 组件通信
-date: 2020-3-31
+date: 2020-03-31
 categories:
  - vue框架
 tags:
  - vue
  - vue-cli
- - 组件通信
 ---
 
 ::: tip

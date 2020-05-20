@@ -1,6 +1,6 @@
 ---
 title: git 远程仓库及操作
-date: 2020-3-7
+date: 2020-03-07
 categories:
   - git
 tags:

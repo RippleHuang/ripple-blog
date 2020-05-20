@@ -1,6 +1,6 @@
 ---
 title: vue router
-date: 2020-4-5
+date: 2020-04-04
 categories:
   - vue框架
 tags:

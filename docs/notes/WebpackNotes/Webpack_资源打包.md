@@ -1,8 +1,8 @@
 ---
 title: webpack 资源打包
-date: 2020-2-24
+date: 2020-02-24
 categories:
-  - webpack
+  - webpack打包
 tags:
   - 资源打包
 ---

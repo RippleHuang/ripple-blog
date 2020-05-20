@@ -1,12 +1,11 @@
 ---
 title: vue 组件化
-date: 2020-3-31
+date: 2020-03-30
 categories:
  - vue框架
 tags:
  - vue
  - vue-cli
- - 组件化
 ---
 
 ::: tip

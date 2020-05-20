@@ -1,11 +1,10 @@
 ---
 title: vue Ajax库
-date: 2020-4-1
+date: 2020-04-01
 categories:
   - vue框架
 tags:
   - vue
-  - Ajax
   - axios
 ---
 

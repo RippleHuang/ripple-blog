@@ -1,8 +1,8 @@
 ---
 title: webpack 基础
-date: 2020-2-24
+date: 2020-02-23
 categories:
-  - webpack
+  - webpack打包
 tags:
   - webpack
 ---

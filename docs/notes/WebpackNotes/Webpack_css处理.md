@@ -1,8 +1,8 @@
 ---
 title: webpack css处理及devServer
-date: 2020-2-25
+date: 2020-02-25
 categories:
-  - webpack
+  - webpack打包
 tags:
   - webpack
 ---

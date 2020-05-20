@@ -1,6 +1,6 @@
 ---
 title: vue Vuex
-date: 2020-4-9
+date: 2020-04-09
 categories:
   - vue框架
 tags:

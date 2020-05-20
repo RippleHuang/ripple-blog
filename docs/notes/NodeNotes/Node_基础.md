@@ -1,6 +1,6 @@
 ---
 title: node 基础以及fs模块
-date: 2020-3-9
+date: 2020-03-09
 categories:
   - node
 tags:

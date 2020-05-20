@@ -1,8 +1,8 @@
 ---
 title: webpack 总结
-date: 2020-3-1
+date: 2020-03-01
 categories:
-  - webpack
+  - webpack打包
 tags:
   - webpack
 ---

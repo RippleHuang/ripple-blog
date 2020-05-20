@@ -1,11 +1,10 @@
 ---
 title: webpack 性能优化
-date: 2020-2-27
+date: 2020-02-27
 categories:
-  - webpack
+  - webpack打包
 tags:
   - webpack
-  - 性能优化
 ---
 
 ::: tip

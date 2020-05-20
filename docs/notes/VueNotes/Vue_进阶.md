@@ -1,6 +1,6 @@
 ---
 title: vue 进阶用法
-date: 2020-3-29
+date: 2020-03-29
 categories:
  - vue框架
 tags:
