@@ -10,12 +10,12 @@ npm run docs:build
 cd docs/.vuepress/dist
 
 # 自定义域名
-echo 'blog.ripplehuang.cn' > CNAME
+echo 'blogs.ripplehuang.cn' > CNAME
 
 git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:RippleHuang/ripple-blog.git master:gh-pages
+git push -f git@gitee.com:rippleHuang/ripple-blog.git master:gh-pages
 
 cd -
