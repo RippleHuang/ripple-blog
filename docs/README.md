@@ -5,4 +5,3 @@ bgImageStyle: {
   height: '400px'
 }
 ---
-<script src="./.vuepress/public/assets/js/line.js"></script>
