@@ -66,7 +66,7 @@
 </template>
 <script>
 import HrButton from '../packages/Button'
-import '../packages/fonts/iconfont.css'
+import '../../public/assets/fonts/iconfont.css'
 export default {
   methods: {
     danger(v) {
