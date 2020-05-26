@@ -12,13 +12,14 @@
         border-right 1px solid transparent
 // 侧栏导航背景
 .sidebar
-  background-color var(--default-color-4) !important
-  a {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
+  scrollbar-width none
+  -ms-overflow-style none
+  a 
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+.sidebar::-webkit-scrollbar
+  display none
 // 页面背景
 .page
   background transparent
@@ -59,8 +60,7 @@
   background transparent !important
   .pagation-list
     .jump:not(.bgprimary)
-      background-color var(--background-color);
-
+      background-color var(--background-color)
 // 时间轴
 .timeline-wrapper
   .year
