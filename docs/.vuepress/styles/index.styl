@@ -12,14 +12,13 @@
         border-right 1px solid transparent
 // 侧栏导航背景
 .sidebar
+  padding-bottom 3.6rem
   scrollbar-width none
   -ms-overflow-style none
   a 
     overflow hidden
     text-overflow ellipsis
     white-space nowrap
-  .sidebar-links
-    background-color var(--default-color-4) !important
 .sidebar::-webkit-scrollbar
   display none
 // 页面背景
@@ -54,6 +53,10 @@
         position absolute
         top 34px
         right 0
+  @media (max-width: 419px)
+    .page-edit
+      padding .6rem
+      font-size .4rem
 // 看板娘
 .banniang-container
   position: static !important
@@ -66,7 +69,6 @@
 // 时间轴
 .timeline-wrapper
   .year
-    font-size 32px
     background transparent
   .year-wrapper
     margin-top 10px
