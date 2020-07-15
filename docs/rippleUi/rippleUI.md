@@ -49,7 +49,7 @@ type | 按钮类型 | String| default, primary, success, info, warning, danger, 
 size | 按钮大小 | String| lg, default, sm | default |
 shape | 按钮形状 | String| orthogon, round, bullet, circle | orthogon |
 special | 按钮风格 | String | default, hollow, shadow, shine, slide, jelly | default |
-icon | 按钮图标 | String | <a href="/.vuepress/components/packages/fonts/demo.html" target="_blank">具体图标使用</a> | - |
+icon | 按钮图标 | String | <a href="/assets/fonts/demo.html" target="_blank">具体图标使用</a> | - |
 disabled | 按钮禁用 | Boolean | false, true | false |
 loading | 按钮加载 | Boolean | false, true | false |
 

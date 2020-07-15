@@ -31,7 +31,8 @@ module.exports = {
   nav: nav,
   valineConfig: {
     appId: privacys.appId,
-    appKey: privacys.appKey
+    appKey: privacys.appKey,
+    placeholder: '快来参与评论吧!'
   },
   lastUpdated: '更新时间',
   sidebar: 'auto',
