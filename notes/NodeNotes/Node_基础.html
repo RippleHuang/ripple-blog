@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>node 基础以及fs模块 | 心晴无云</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/assets/img/logo.jpg">
+    <meta name="description" content="记录走过的前端之路">
+    <meta name="author" content="学习与分享,向全栈前进">
+    <meta name="keywords" content="个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.599e030f.css" as="style"><link rel="preload" href="/assets/js/app.bb55bb1a.js" as="script"><link rel="preload" href="/assets/js/4.97154772.js" as="script"><link rel="preload" href="/assets/js/1.c7e591f2.js" as="script"><link rel="preload" href="/assets/js/34.0c51e11d.js" as="script"><link rel="preload" href="/assets/js/20.dde36c97.js" as="script"><link rel="prefetch" href="/assets/js/10.b352966c.js"><link rel="prefetch" href="/assets/js/11.feb5da44.js"><link rel="prefetch" href="/assets/js/12.3fa43037.js"><link rel="prefetch" href="/assets/js/13.595cc734.js"><link rel="prefetch" href="/assets/js/14.2d41f284.js"><link rel="prefetch" href="/assets/js/15.52bcb3dd.js"><link rel="prefetch" href="/assets/js/16.78033b18.js"><link rel="prefetch" href="/assets/js/17.0c06f997.js"><link rel="prefetch" href="/assets/js/18.436bcee8.js"><link rel="prefetch" href="/assets/js/19.eebf4ac3.js"><link rel="prefetch" href="/assets/js/2.94dd4d80.js"><link rel="prefetch" href="/assets/js/21.4f877fd8.js"><link rel="prefetch" href="/assets/js/22.90d2b2e4.js"><link rel="prefetch" href="/assets/js/23.73b9168b.js"><link rel="prefetch" href="/assets/js/24.53e87ed0.js"><link rel="prefetch" href="/assets/js/25.6c4cfab1.js"><link rel="prefetch" href="/assets/js/26.720c27f6.js"><link rel="prefetch" href="/assets/js/27.a66f053b.js"><link rel="prefetch" href="/assets/js/28.440ffc8e.js"><link rel="prefetch" href="/assets/js/29.fc8e97bc.js"><link rel="prefetch" href="/assets/js/30.a5e1ef14.js"><link rel="prefetch" href="/assets/js/31.11070f47.js"><link rel="prefetch" href="/assets/js/32.2fdb0a94.js"><link rel="prefetch" href="/assets/js/33.63e1daa4.js"><link rel="prefetch" href="/assets/js/35.4811552e.js"><link rel="prefetch" href="/assets/js/36.99983896.js"><link rel="prefetch" href="/assets/js/37.1fcba7fd.js"><link rel="prefetch" href="/assets/js/38.7b070a5c.js"><link rel="prefetch" href="/assets/js/39.1d8ad787.js"><link rel="prefetch" href="/assets/js/40.656721e9.js"><link rel="prefetch" href="/assets/js/41.d1f9a47b.js"><link rel="prefetch" href="/assets/js/42.1ca931d8.js"><link rel="prefetch" href="/assets/js/43.d788b26f.js"><link rel="prefetch" href="/assets/js/44.1b4d816b.js"><link rel="prefetch" href="/assets/js/45.36860b02.js"><link rel="prefetch" href="/assets/js/46.73e51b1d.js"><link rel="prefetch" href="/assets/js/47.95acd657.js"><link rel="prefetch" href="/assets/js/48.45b35111.js"><link rel="prefetch" href="/assets/js/49.ee8fb4bf.js"><link rel="prefetch" href="/assets/js/5.6ba3370c.js"><link rel="prefetch" href="/assets/js/50.3961d0aa.js"><link rel="prefetch" href="/assets/js/51.ded72553.js"><link rel="prefetch" href="/assets/js/52.3ad0fa1a.js"><link rel="prefetch" href="/assets/js/53.7550c75e.js"><link rel="prefetch" href="/assets/js/54.0a508f84.js"><link rel="prefetch" href="/assets/js/6.4aa81e6c.js"><link rel="prefetch" href="/assets/js/7.08c33c3f.js"><link rel="prefetch" href="/assets/js/8.8665d6ca.js"><link rel="prefetch" href="/assets/js/9.d8a8e288.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.599e030f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>心晴无云</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>小文</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.jpg" alt="心晴无云" class="logo"> <span class="site-name">心晴无云</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      类别
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="iconfont undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue框架/" class="nav-link"><i class="iconfont undefined"></i>
+  vue框架
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webpack打包/" class="nav-link"><i class="iconfont undefined"></i>
+  webpack打包
+</a></li><li class="dropdown-item"><!----> <a href="/categories/服务器/" class="nav-link"><i class="iconfont undefined"></i>
+  服务器
+</a></li><li class="dropdown-item"><!----> <a href="/categories/项目/" class="nav-link"><i class="iconfont undefined"></i>
+  项目
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/rippleUi/rippleUI.html" class="nav-link"><i class="iconfont undefined"></i>
+  UI
+</a></div><div class="nav-item"><a href="http://8.129.170.77" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  项目
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-account"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/RippleHuang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/ripplehuang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  码云
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/RippleHuang/ripple-blog" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><img src="/assets/img/logo.jpg" alt="author-avatar" class="personal-img" data-v-b038cec6> <h3 class="name" data-v-b038cec6>
+    小文
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>30</h3> <h6 data-v-b038cec6>文章</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>17</h3> <h6 data-v-b038cec6>标签</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      类别
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="iconfont undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue框架/" class="nav-link"><i class="iconfont undefined"></i>
+  vue框架
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webpack打包/" class="nav-link"><i class="iconfont undefined"></i>
+  webpack打包
+</a></li><li class="dropdown-item"><!----> <a href="/categories/服务器/" class="nav-link"><i class="iconfont undefined"></i>
+  服务器
+</a></li><li class="dropdown-item"><!----> <a href="/categories/项目/" class="nav-link"><i class="iconfont undefined"></i>
+  项目
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/rippleUi/rippleUI.html" class="nav-link"><i class="iconfont undefined"></i>
+  UI
+</a></div><div class="nav-item"><a href="http://8.129.170.77" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  项目
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-account"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/RippleHuang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/ripplehuang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  码云
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/RippleHuang/ripple-blog" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>node 基础以及fs模块</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/notes/NodeNotes/Node_%E5%9F%BA%E7%A1%80.html#什么是-node" class="sidebar-link">什么是 node</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/notes/NodeNotes/Node_%E5%9F%BA%E7%A1%80.html#js-运行环境" class="sidebar-link">js 运行环境</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/notes/NodeNotes/Node_%E5%9F%BA%E7%A1%80.html#node-运行环境-repl" class="sidebar-link">node 运行环境 REPL</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/notes/NodeNotes/Node_%E5%9F%BA%E7%A1%80.html#模块化" class="sidebar-link">模块化</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/notes/NodeNotes/Node_%E5%9F%BA%E7%A1%80.html#内置模块-fs" class="sidebar-link">内置模块 fs</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>node 基础以及fs模块</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>小文</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>node 基础以及fs模块</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>小文</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-03-09</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/notes/NodeNotes/Node_%E5%9F%BA%E7%A1%80.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      node
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><div class="custom-block tip"><p>node 基础以及fs模块</p></div> <h2 id="什么是-node"><a href="#什么是-node" class="header-anchor">#</a> 什么是 node</h2> <ul><li>chrome（google） V8 runtime</li> <li>事件驱动</li> <li>非阻塞的 i/o(input/output)</li></ul> <p>i/o:输入输出流 正常情况下的操作都是阻塞的
+网络请求 数据库处理 文件的读写....
+优点：高并发特别好（同时大量的数据处理，如双 11 的同一商品被多人抢购）</p> <h2 id="js-运行环境"><a href="#js-运行环境" class="header-anchor">#</a> js 运行环境</h2> <ul><li>浏览器
+<ul><li>基本语法</li> <li>bom</li> <li>dom</li> <li>ajax</li> <li>系统文件数据库（不能，不是语言不能 处于安全性考虑不能）</li></ul></li> <li>服务器
+<ul><li>基本语法</li> <li>能操作数据库</li> <li>能操作本地文件</li></ul></li></ul> <h2 id="node-运行环境-repl"><a href="#node-运行环境-repl" class="header-anchor">#</a> node 运行环境 REPL</h2> <p>直接在命令行（cmd/终端）书写</p> <blockquote><p>ctrl + c 退出当前终端 按下两次 退出 node REPL<br>
+ctrl + d 退出 node REPL<br>
+向上/向下 键 - 查看输入的历史命令<br>
+tab 键 - 列出当前命令<br>
+.help - 列出使用命令<br>
+.break - 退出多行表达式<br>
+.clear - 退出多行表达式<br>
+.save filename - 保存当前的 Node REPL 会话到指定文件<br>
+.load filename - 载入当前 Node REPL 会话的文件内容</p></blockquote> <h2 id="模块化"><a href="#模块化" class="header-anchor">#</a> 模块化</h2> <ul><li><p>内置模块</p></li> <li><p>第三方模块</p></li> <li><p>自定义模块</p> <ul><li>创建一个模块（一个 js 文件一个模块）</li> <li>导出一个模块（module.exports=name）</li> <li>引用一个模块并且调用</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//module.js</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;hello nodejs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> name<span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//引用一个模块并且调用</span>
+<span class="token keyword">let</span> Module <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./module&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Module<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Module<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul> <h2 id="内置模块-fs"><a href="#内置模块-fs" class="header-anchor">#</a> 内置模块 fs</h2> <ul><li>数据操作
+<ul><li>c(creat)</li> <li>u(updata)</li> <li>r(read)</li> <li>d(delete)</li></ul></li> <li>代码</li></ul> <details class="custom-block details"><summary>点击查看代码</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//引入内置模块</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//同步读取文件 在关键位置捕获错误信息</span>
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> dirs <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readdirSync</span><span class="token punctuation">(</span><span class="token string">&quot;./&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dirs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;出错了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//异步读取</span>
+<span class="token comment">// fs.readdir('./',(err,data)=&gt;{</span>
+<span class="token comment">//     // console.log(err)</span>
+<span class="token comment">//     // console.log(data)</span>
+<span class="token comment">//     if(err){</span>
+<span class="token comment">//         console.log('读取错误')</span>
+<span class="token comment">//     }else{</span>
+<span class="token comment">//         console.log(data)</span>
+<span class="token comment">//     }</span>
+<span class="token comment">// })</span>
+<span class="token comment">//错误的回调优先，在回调函数中第一个参数表示错误对象</span>
+<span class="token comment">//默认为null</span>
+
+<span class="token comment">//创建，只需要err不需要data</span>
+<span class="token comment">// fs.mkdir('./test1',err =&gt;{</span>
+<span class="token comment">//     console.log(err)</span>
+<span class="token comment">// })</span>
+<span class="token comment">//更改文件夹名</span>
+<span class="token comment">// fs.rename('./test1','./test2',err=&gt;{</span>
+<span class="token comment">//     if(err){</span>
+<span class="token comment">//         console.log(err)</span>
+<span class="token comment">//     }else{</span>
+<span class="token comment">//         console.log('更改成功')</span>
+<span class="token comment">//     }</span>
+<span class="token comment">// })</span>
+<span class="token comment">//删除 只能删除空文件夹</span>
+<span class="token comment">// fs.rmdir('./test2',err=&gt;{</span>
+<span class="token comment">//     if(err){</span>
+<span class="token comment">//         console.log(err)</span>
+<span class="token comment">//     }else{</span>
+<span class="token comment">//         console.log('删除成功')</span>
+<span class="token comment">//     }</span>
+<span class="token comment">// })</span>
+</code></pre></div></details> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//创建文件 覆盖写入</span>
+<span class="token comment">// fs.writeFile('./test/name.txt','今天的收获不错',err=&gt;{</span>
+<span class="token comment">//     console.log(err)</span>
+<span class="token comment">// })</span>
+<span class="token comment">// //写入文件</span>
+<span class="token comment">// fs.appendFile('./test/name.txt','node.js',err=&gt;{</span>
+<span class="token comment">//     console.log(err)</span>
+<span class="token comment">// })</span>
+<span class="token comment">//读取文件</span>
+<span class="token comment">// fs.readFile('./test/name.txt','utf-8',(err,msg)=&gt;{</span>
+<span class="token comment">//     console.log(err)</span>
+<span class="token comment">//     console.log(msg)</span>
+<span class="token comment">//     //默认读取二进制数据流 buffer 也可在实参中写入utf-8</span>
+<span class="token comment">//     // console.log(msg.toString('utf-8'))</span>
+<span class="token comment">// })</span>
+<span class="token comment">//删除文件</span>
+fs<span class="token punctuation">.</span><span class="token function">unlink</span><span class="token punctuation">(</span><span class="token string">&quot;./test/name.txt&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><div class="edit-link"><a href="https://github.com/RippleHuang/ripple-blog/edit/test/docs/notes/NodeNotes/Node_基础.md" target="_blank" rel="noopener noreferrer">帮助我改善此页面</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新时间: </span> <span class="time">5/20/2020, 12:56:12 PM</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><canvas id="vuepress-canvas-ribbon"></canvas><div class="vuepress-canvas-nest-element"></div><!----><!----><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 心晴无云
+    </div> <div class="operation" style="right:90px;bottom:40px;display:none;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:none;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="180" class="live2d" style="position:fixed;right:5vw;bottom:2vh;opacity:0.7;z-index:9999;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div></div></div>
+    <script src="/assets/js/app.bb55bb1a.js" defer></script><script src="/assets/js/4.97154772.js" defer></script><script src="/assets/js/1.c7e591f2.js" defer></script><script src="/assets/js/34.0c51e11d.js" defer></script><script src="/assets/js/20.dde36c97.js" defer></script>
+  </body>
+</html>
