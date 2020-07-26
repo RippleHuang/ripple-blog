@@ -1,15 +1,15 @@
 ---
-title: CSS 面试问题
+title: CSS 问题
 date: 2020-07-23
 publish: true
 categories:
   - css
 tags:
-  - CSS3
+  - CSS
 ---
 
 ::: tip
-CSS 面试问题
+CSS 问题
 :::
 
 <!-- more -->
