@@ -49,7 +49,7 @@ arr instanceof Array
 arr.constructor == Array
 Object.protype.toString.call(arr) == '[Object Array]'
 
-## “eval是做什么的
+## eval是做什么的
 
 它的功能是把对应的字符串解析成 JS 代码并运行；
 应该避免使用 eval，不安全，非常耗性能（2次，一次解析成 js 语句，一次执行）。
@@ -60,7 +60,7 @@ Object.protype.toString.call(arr) == '[Object Array]'
 省略return关键字
 改变this指向
 
-##  new操作符具体干了什么呢
+## new操作符具体干了什么呢
 
 1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
 2、属性和方法被加入到 this 引用的对象中。
@@ -82,9 +82,8 @@ var result = Base.call(obj)
 如果是值类型，返回obj。如果是引用类型，就返回这个引用类型的对象。
 
 
-
 ```javascript
-if (typeof(result) == "object"){  func=result;}else{    func=obj;;}
+if (typeof(result) == "object"){  func=result;}else{    func=obj;}
 ```
 
 ## AMD CMD CommonJS区别
@@ -92,8 +91,6 @@ if (typeof(result) == "object"){  func=result;}else{    func=obj;;}
 CommonJS：同步加载
 AMD（require.js）:异步加载模块，依赖前置，提前执行
 CMD（sea.js）:异步加载模块，依赖就近，延迟加载
-
-
 
 ## require与import区别
 
@@ -398,9 +395,19 @@ JavaScript对象是通过引用来传递的，我们创建的每个新对象实�
 就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象。
 
 ```js
-`function` `Func(){}``Func.prototype.name = ``"Sean"``;``Func.prototype.getInfo = ``function``() {``  ``return` `this``.name;``} ``var` `person = ``new` `Func(); ``// 现在可以参考``var` `person = Object.create(oldObject);``console.log(person.getInfo());``//它拥有了Func的属性和方法``//"Sean"``console.log(Func.prototype);``// Func { name="Sean", getInfo=function()}`
+function Func(){}
+Func.prototype.name = "Sean";
+Func.prototype.getInfo = function() {
+    return this.name;
+}
+var person = new Func();
+// 现在可以参考var person = Object.create(oldObject);
+console.log(person.getInfo());
+//它拥有了Func的属性和方法
+//"Sean"
+console.log(Func.prototype);
+// Func { name="Sean", getInfo=function()}
 ```
-
 
 ## var let const区别
 
@@ -519,8 +526,6 @@ filter过滤
 　　get参数拼接在url上，post放在请求体内(数据体积可能更大)
 
 　　安全性：post易于防止CSRF/XSRF跨站请求伪造
-
-你轻轻松松的给出了一个“标准答案”：
 
 - GET在浏览器回退时是无害的，而POST会再次提交请求。
 
