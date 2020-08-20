@@ -265,7 +265,7 @@ strong, em, ins, del, code
 ## 为什么推荐css`<link>`在head之前，js`<script>`在`</body>`之前
 
 作用：当页面渲染完成再去执行`< script>`，防止页面阻塞。
-例外：希望DOM还没加载必须需要先加载的js会放置在<head>中,有些加了defer、async的<script>也会放在< head>中。
+例外：希望DOM还没加载必须需要先加载的js会放置在`<head>`中,有些加了defer、async的<script>也会放在`< head>`中。
 
 ## 什么是渐进式渲染
 
